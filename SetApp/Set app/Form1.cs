@@ -12,12 +12,16 @@ namespace Set_app
 {
     public partial class Set_App : Form
     {
+        private readonly List<string> list1 = new List<string>();
+        private readonly List<string> list2 = new List<string>();
+        private readonly List<string> list3 = new List<string>();
+        private readonly List<string> list4 = new List<string>();
+        private readonly List<string> list5 = new List<string>();
 
-        List<string> list1 = new List<string>();
-        List<string> list2 = new List<string>();
-        //int[] arr;
-
-        int addClicked = 0;
+        int addButtonClicked = 0;
+        bool textbox3IsVisible = false;
+        bool textbox4IsVisible = false;
+        bool textbox5IsVisible = false;
 
         public Set_App()
         {
@@ -29,31 +33,65 @@ namespace Set_app
             
         }
 
+        private void Add_To_List(int setBox)
+        {
+           
+            string s = "";
+            switch (setBox)
+            {
+                case 1:     s = richTextBox1.Text;   break;
+                case 2:     s = richTextBox2.Text;   break;
+                case 3:     s = richTextBox3.Text;   break;
+                case 4:     s = richTextBox4.Text;   break;
+                case 5:     s = richTextBox5.Text;   break;
+                default:    break;
+            }
+            
+            string[] values = s.Split(',').Select(sValue => sValue.Trim()).ToArray();
+            foreach (var item in values)
+            {
+                switch (setBox)
+                {
+                    case 1: list1.Add(item);  break;
+                    case 2: list2.Add(item);  break;
+                    case 3: list3.Add(item);  break;
+                    case 4: list4.Add(item);  break;
+                    case 5: list5.Add(item);  break;
+                    default:   break;    
+                }
+            }
+        }
 
         private void Union_Click(object sender, EventArgs e)
         {
             list1.Clear();
             list2.Clear();
-            list1.Add(set_1_1.Value.ToString());
-            list1.Add(set_1_2.Value.ToString());
-            list1.Add(set_1_3.Value.ToString());
-            list1.Add(set_1_4.Value.ToString());
-            list1.Add(set_1_5.Value.ToString());
+            list3.Clear();
+            list4.Clear();
+            list5.Clear();
+            Add_To_List(1);
+            Add_To_List(2);
+            if (textbox3IsVisible == true) Add_To_List(3);
+            if (textbox4IsVisible == true) Add_To_List(4);
+            if (textbox5IsVisible == true) Add_To_List(5);
 
-            list2.Add(set_2_1.Value.ToString());
-            list2.Add(set_2_2.Value.ToString());
-            list2.Add(set_2_3.Value.ToString());
-
-            string result = "{ ";
             List<string> a3 = new List<string>();
             a3.AddRange(list1);
             a3.AddRange(list2);
+            if (textbox3IsVisible == true) a3.AddRange(list3);
+            if (textbox4IsVisible == true) a3.AddRange(list4);
+            if (textbox5IsVisible == true) a3.AddRange(list5);
 
             List<string> union = a3.Distinct().ToList();
-            
-            for (int i = 0; i < union.Count; i++)
+            Print_Result(union);
+        }
+
+        private void Print_Result(List<string> list)
+        {
+            string result = "{ ";
+            for (int i = 0; i < list.Count; i++)
             {
-                result += union[i] + ( i < union.Count - 1 ? " , " : "");
+                result += list[i] + (i < list.Count - 1 ? " , " : "");
             }
             result += " }";
             resultLabel.Text = result;
@@ -61,38 +99,51 @@ namespace Set_app
 
         private void Reset_Click(object sender, EventArgs e)
         {
-            set_1_1.Value = 0;
-            set_1_2.Value = 0;
-            set_1_3.Value = 0;
-            set_1_4.Value = 0;
-            set_1_5.Value = 0;
-
-            set_2_1.Value = 0;
-            set_2_2.Value = 0;
-            set_2_3.Value = 0;
+            list1.Clear();
+            list2.Clear();
+            list3.Clear();
+            list4.Clear();
+            list5.Clear();
+            resultLabel.Text = "";
+            richTextBox1.Text = "";
+            richTextBox2.Text = "";
+            richTextBox3.Text = "";
+            richTextBox4.Text = "";
+            richTextBox5.Text = "";
+            richTextBox3.Hide();
+            richTextBox4.Hide();
+            richTextBox5.Hide();
+            label3.Hide();
+            label4.Hide();
+            label5.Hide();
+            textbox3IsVisible = false;
+            textbox4IsVisible = false;
+            textbox5IsVisible = false;
+            addButtonClicked = 0;
         }
 
-        private void Add_button_1_Click(object sender, EventArgs e)
+        private void Add_Set_Click(object sender, EventArgs e)
         {
-            if (addClicked == 0)
+            if (addButtonClicked == 0)
             {
-                set_1_3.Show();
-                addClicked++;
+                richTextBox3.Show();
+                label3.Show();
+                textbox3IsVisible = true;
+                addButtonClicked++;
             }
-            else if (addClicked == 1)
+            else if (addButtonClicked == 1)
             {
-                set_1_4.Show();
-                addClicked++;
+                richTextBox4.Show();
+                label4.Show();
+                textbox4IsVisible = true;
+                addButtonClicked++;
             }
-            else if (addClicked == 2)
+            else if (addButtonClicked == 2)
             {
-                set_1_5.Show();
-                addClicked++;
-            }
-            else if (addClicked == 2)
-            {
-                set_1_5.Show();
-                addClicked++;
+                richTextBox5.Show();
+                label5.Show();
+                textbox5IsVisible = true;
+                addButtonClicked++;
             }
         }
     }
