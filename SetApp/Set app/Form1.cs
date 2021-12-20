@@ -64,6 +64,13 @@ namespace Set_app
 
         private void Union_Click(object sender, EventArgs e)
         {
+            List<string> union = Create_Result_List();
+            union = union.Distinct().ToList();
+            Print_Result(union);
+        }
+
+        private List<string> Create_Result_List()
+        {
             list1.Clear();
             list2.Clear();
             list3.Clear();
@@ -75,15 +82,14 @@ namespace Set_app
             if (textbox4IsVisible == true) Add_To_List(4);
             if (textbox5IsVisible == true) Add_To_List(5);
 
-            List<string> a3 = new List<string>();
-            a3.AddRange(list1);
-            a3.AddRange(list2);
-            if (textbox3IsVisible == true) a3.AddRange(list3);
-            if (textbox4IsVisible == true) a3.AddRange(list4);
-            if (textbox5IsVisible == true) a3.AddRange(list5);
+            List<string> result = new List<string>();
+            result.AddRange(list1);
+            result.AddRange(list2);
+            if (textbox3IsVisible == true) result.AddRange(list3);
+            if (textbox4IsVisible == true) result.AddRange(list4);
+            if (textbox5IsVisible == true) result.AddRange(list5);
 
-            List<string> union = a3.Distinct().ToList();
-            Print_Result(union);
+            return result;
         }
 
         private void Print_Result(List<string> list)
