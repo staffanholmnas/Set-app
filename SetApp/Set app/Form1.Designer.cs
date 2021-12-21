@@ -67,6 +67,7 @@ namespace Set_app
             this.Intersection.TabIndex = 2;
             this.Intersection.Text = "Intersection";
             this.Intersection.UseVisualStyleBackColor = true;
+            this.Intersection.Click += new System.EventHandler(this.Intersection_Click);
             // 
             // Product
             // 
@@ -85,6 +86,7 @@ namespace Set_app
             this.Difference.TabIndex = 2;
             this.Difference.Text = "Difference";
             this.Difference.UseVisualStyleBackColor = true;
+            this.Difference.Click += new System.EventHandler(this.Difference_Click);
             // 
             // resultLabel
             // 

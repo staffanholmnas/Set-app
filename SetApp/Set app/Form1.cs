@@ -64,12 +64,18 @@ namespace Set_app
 
         private void Union_Click(object sender, EventArgs e)
         {
-            List<string> union = Create_Result_List();
+            List<string> union = new List<string>();
+            Create_Result_Lists();
+            union.AddRange(list1);
+            union.AddRange(list2);
+            if (textbox3IsVisible == true) union.AddRange(list3);
+            if (textbox4IsVisible == true) union.AddRange(list4);
+            if (textbox5IsVisible == true) union.AddRange(list5);
             union = union.Distinct().ToList();
             Print_Result(union);
         }
 
-        private List<string> Create_Result_List()
+        private void Create_Result_Lists()
         {
             list1.Clear();
             list2.Clear();
@@ -81,15 +87,7 @@ namespace Set_app
             if (textbox3IsVisible == true) Add_To_List(3);
             if (textbox4IsVisible == true) Add_To_List(4);
             if (textbox5IsVisible == true) Add_To_List(5);
-
-            List<string> result = new List<string>();
-            result.AddRange(list1);
-            result.AddRange(list2);
-            if (textbox3IsVisible == true) result.AddRange(list3);
-            if (textbox4IsVisible == true) result.AddRange(list4);
-            if (textbox5IsVisible == true) result.AddRange(list5);
-
-            return result;
+           
         }
 
         private void Print_Result(List<string> list)
@@ -151,6 +149,29 @@ namespace Set_app
                 textbox5IsVisible = true;
                 addButtonClicked++;
             }
+        }
+
+        private void Intersection_Click(object sender, EventArgs e)
+        {
+            Create_Result_Lists();
+            List<string> intersection = list1.Intersect(list2).ToList();
+            if (textbox3IsVisible == true) intersection = intersection.Intersect(list3).ToList();
+            if (textbox4IsVisible == true) intersection = intersection.Intersect(list4).ToList();
+            if (textbox5IsVisible == true) intersection = intersection.Intersect(list5).ToList();
+            
+            Print_Result(intersection);
+        }
+
+        private void Difference_Click(object sender, EventArgs e)
+        {
+            Create_Result_Lists();
+            List<string> difference = list1.Except(list2).ToList();
+            if (textbox3IsVisible == true) difference = difference.Except(list3).ToList();
+            if (textbox4IsVisible == true) difference = difference.Except(list4).ToList();
+            if (textbox5IsVisible == true) difference = difference.Except(list5).ToList();
+
+            Print_Result(difference);
+
         }
     }
 }
