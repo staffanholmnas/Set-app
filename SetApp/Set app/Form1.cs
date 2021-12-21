@@ -171,7 +171,42 @@ namespace Set_app
             if (textbox5IsVisible == true) difference = difference.Except(list5).ToList();
 
             Print_Result(difference);
+        }
 
+        private void Product_Click(object sender, EventArgs e)
+        {
+            Create_Result_Lists();
+            List<string> product = new List<string>();
+            for (int i = 0; i < list1.Count; i++)
+            {
+                for (int j = 0; j < list2.Count; j++)
+                {
+                    if (textbox3IsVisible == true)
+                    {
+                        for (int k = 0; k < list3.Count; k++)
+                        {
+                            if (textbox4IsVisible == true)
+                            {
+                                for (int l = 0; l < list4.Count; l++)
+                                {
+                                    if (textbox5IsVisible == true)
+                                    {
+                                        for (int m = 0; m < list5.Count; m++)
+                                        {
+                                            product.Add("(" + list1[i] + "," + list2[j] + "," + list3[k] + "," + list4[l] + "," + list5[m] + ")");
+                                        }
+                                    }
+                                    else product.Add("(" + list1[i] + "," + list2[j] + "," + list3[k] + "," + list4[l] + ")");
+                                }
+                            }
+                            else product.Add("(" + list1[i] + "," + list2[j] + "," + list3[k] + ")");
+                        }
+                    }
+                    else product.Add("(" + list1[i] + "," + list2[j] + ")");
+                }
+            }
+            product = product.Distinct().ToList();
+            Print_Result(product);
         }
     }
 }

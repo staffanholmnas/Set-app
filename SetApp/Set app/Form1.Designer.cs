@@ -77,6 +77,7 @@ namespace Set_app
             this.Product.TabIndex = 2;
             this.Product.Text = "Product";
             this.Product.UseVisualStyleBackColor = true;
+            this.Product.Click += new System.EventHandler(this.Product_Click);
             // 
             // Difference
             // 
@@ -92,8 +93,9 @@ namespace Set_app
             // 
             this.resultLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.resultLabel.Location = new System.Drawing.Point(545, 126);
+            this.resultLabel.MinimumSize = new System.Drawing.Size(180, 111);
             this.resultLabel.Name = "resultLabel";
-            this.resultLabel.Size = new System.Drawing.Size(180, 110);
+            this.resultLabel.Size = new System.Drawing.Size(180, 277);
             this.resultLabel.TabIndex = 3;
             // 
             // Reset
@@ -252,7 +254,6 @@ namespace Set_app
         private System.Windows.Forms.Button Intersection;
         private System.Windows.Forms.Button Product;
         private System.Windows.Forms.Button Difference;
-        private System.Windows.Forms.Label resultLabel;
         private System.Windows.Forms.Button Reset;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RichTextBox richTextBox1;
@@ -266,6 +267,7 @@ namespace Set_app
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RichTextBox richTextBox5;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label resultLabel;
     }
 }
 
