@@ -54,47 +54,56 @@ namespace Set_app
             // 
             // Union
             // 
+            this.Union.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Union.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Union.Location = new System.Drawing.Point(441, 126);
             this.Union.Name = "Union";
-            this.Union.Size = new System.Drawing.Size(75, 23);
+            this.Union.Size = new System.Drawing.Size(83, 23);
             this.Union.TabIndex = 2;
             this.Union.Text = "Union";
-            this.Union.UseVisualStyleBackColor = true;
+            this.Union.UseVisualStyleBackColor = false;
             this.Union.Click += new System.EventHandler(this.Union_Click);
             // 
             // Intersection
             // 
+            this.Intersection.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Intersection.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Intersection.Location = new System.Drawing.Point(441, 156);
             this.Intersection.Name = "Intersection";
-            this.Intersection.Size = new System.Drawing.Size(75, 23);
+            this.Intersection.Size = new System.Drawing.Size(83, 23);
             this.Intersection.TabIndex = 2;
             this.Intersection.Text = "Intersection";
-            this.Intersection.UseVisualStyleBackColor = true;
+            this.Intersection.UseVisualStyleBackColor = false;
             this.Intersection.Click += new System.EventHandler(this.Intersection_Click);
             // 
             // Product
             // 
+            this.Product.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Product.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Product.Location = new System.Drawing.Point(441, 214);
             this.Product.Name = "Product";
-            this.Product.Size = new System.Drawing.Size(75, 23);
+            this.Product.Size = new System.Drawing.Size(83, 23);
             this.Product.TabIndex = 2;
             this.Product.Text = "Product";
-            this.Product.UseVisualStyleBackColor = true;
+            this.Product.UseVisualStyleBackColor = false;
             this.Product.Click += new System.EventHandler(this.Product_Click);
             // 
             // Difference
             // 
+            this.Difference.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Difference.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Difference.Location = new System.Drawing.Point(441, 185);
             this.Difference.Name = "Difference";
-            this.Difference.Size = new System.Drawing.Size(75, 23);
+            this.Difference.Size = new System.Drawing.Size(83, 23);
             this.Difference.TabIndex = 2;
             this.Difference.Text = "Difference";
-            this.Difference.UseVisualStyleBackColor = true;
+            this.Difference.UseVisualStyleBackColor = false;
             this.Difference.Click += new System.EventHandler(this.Difference_Click);
             // 
             // resultLabel
             // 
             this.resultLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.resultLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel.Location = new System.Drawing.Point(545, 126);
             this.resultLabel.MinimumSize = new System.Drawing.Size(180, 111);
             this.resultLabel.Name = "resultLabel";
@@ -103,25 +112,31 @@ namespace Set_app
             // 
             // Reset
             // 
+            this.Reset.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Reset.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Reset.Location = new System.Drawing.Point(312, 156);
             this.Reset.Name = "Reset";
             this.Reset.Size = new System.Drawing.Size(75, 23);
             this.Reset.TabIndex = 4;
             this.Reset.Text = "Reset";
-            this.Reset.UseVisualStyleBackColor = true;
+            this.Reset.UseVisualStyleBackColor = false;
             this.Reset.Click += new System.EventHandler(this.Reset_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Location = new System.Drawing.Point(561, 107);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 13);
+            this.label6.Size = new System.Drawing.Size(43, 17);
             this.label6.TabIndex = 5;
             this.label6.Text = "Result";
             // 
             // richTextBox1
             // 
+            this.richTextBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(137, 126);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(152, 32);
@@ -130,6 +145,7 @@ namespace Set_app
             // 
             // richTextBox2
             // 
+            this.richTextBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox2.Location = new System.Drawing.Point(137, 185);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(152, 31);
@@ -139,33 +155,42 @@ namespace Set_app
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(152, 107);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.Size = new System.Drawing.Size(37, 17);
             this.label1.TabIndex = 14;
             this.label1.Text = "Set 1";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(152, 167);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.Size = new System.Drawing.Size(37, 17);
             this.label2.TabIndex = 14;
             this.label2.Text = "Set 2";
             // 
             // Add_Set
             // 
+            this.Add_Set.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Add_Set.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add_Set.Location = new System.Drawing.Point(312, 126);
             this.Add_Set.Name = "Add_Set";
             this.Add_Set.Size = new System.Drawing.Size(75, 23);
             this.Add_Set.TabIndex = 15;
             this.Add_Set.Text = "Add set";
-            this.Add_Set.UseVisualStyleBackColor = true;
+            this.Add_Set.UseVisualStyleBackColor = false;
             this.Add_Set.Click += new System.EventHandler(this.Add_Set_Click);
             // 
             // richTextBox3
             // 
+            this.richTextBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox3.Location = new System.Drawing.Point(137, 247);
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.Size = new System.Drawing.Size(152, 31);
@@ -176,15 +201,19 @@ namespace Set_app
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(152, 229);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.Size = new System.Drawing.Size(37, 17);
             this.label3.TabIndex = 14;
             this.label3.Text = "Set 3";
             this.label3.Visible = false;
             // 
             // richTextBox4
             // 
+            this.richTextBox4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox4.Location = new System.Drawing.Point(137, 308);
             this.richTextBox4.Name = "richTextBox4";
             this.richTextBox4.Size = new System.Drawing.Size(152, 31);
@@ -195,15 +224,19 @@ namespace Set_app
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(152, 290);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 13);
+            this.label4.Size = new System.Drawing.Size(37, 17);
             this.label4.TabIndex = 14;
             this.label4.Text = "Set 4";
             this.label4.Visible = false;
             // 
             // richTextBox5
             // 
+            this.richTextBox5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox5.Location = new System.Drawing.Point(137, 372);
             this.richTextBox5.Name = "richTextBox5";
             this.richTextBox5.Size = new System.Drawing.Size(152, 31);
@@ -214,9 +247,12 @@ namespace Set_app
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Location = new System.Drawing.Point(152, 354);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 13);
+            this.label5.Size = new System.Drawing.Size(37, 17);
             this.label5.TabIndex = 14;
             this.label5.Text = "Set 5";
             this.label5.Visible = false;
@@ -224,27 +260,32 @@ namespace Set_app
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label7.Location = new System.Drawing.Point(137, 62);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(158, 15);
+            this.label7.Size = new System.Drawing.Size(227, 21);
             this.label7.TabIndex = 16;
             this.label7.Text = "Enter comma-separated values.";
             // 
             // quit_button
             // 
+            this.quit_button.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.quit_button.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quit_button.Location = new System.Drawing.Point(312, 214);
             this.quit_button.Name = "quit_button";
             this.quit_button.Size = new System.Drawing.Size(75, 23);
             this.quit_button.TabIndex = 17;
             this.quit_button.Text = "Quit";
-            this.quit_button.UseVisualStyleBackColor = true;
+            this.quit_button.UseVisualStyleBackColor = false;
             this.quit_button.Click += new System.EventHandler(this.quit_button_Click);
             // 
             // Set_App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(852, 500);
             this.Controls.Add(this.quit_button);
             this.Controls.Add(this.label7);
