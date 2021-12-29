@@ -317,7 +317,11 @@ namespace Set_app
             this.Controls.Add(this.Product);
             this.Controls.Add(this.Intersection);
             this.Controls.Add(this.Union);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(868, 539);
+            this.MinimumSize = new System.Drawing.Size(868, 539);
             this.Name = "Set_App";
             this.Text = "Set app";
             this.Load += new System.EventHandler(this.Form1_Load);
