@@ -29,6 +29,7 @@ namespace Set_app
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Set_App));
             this.Union = new System.Windows.Forms.Button();
             this.Intersection = new System.Windows.Forms.Button();
             this.Product = new System.Windows.Forms.Button();
@@ -47,6 +48,8 @@ namespace Set_app
             this.label4 = new System.Windows.Forms.Label();
             this.richTextBox5 = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.quit_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Union
@@ -218,11 +221,34 @@ namespace Set_app
             this.label5.Text = "Set 5";
             this.label5.Visible = false;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label7.Location = new System.Drawing.Point(137, 62);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(158, 15);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Enter comma-separated values.";
+            // 
+            // quit_button
+            // 
+            this.quit_button.Location = new System.Drawing.Point(312, 214);
+            this.quit_button.Name = "quit_button";
+            this.quit_button.Size = new System.Drawing.Size(75, 23);
+            this.quit_button.TabIndex = 17;
+            this.quit_button.Text = "Quit";
+            this.quit_button.UseVisualStyleBackColor = true;
+            this.quit_button.Click += new System.EventHandler(this.quit_button_Click);
+            // 
             // Set_App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(806, 462);
+            this.BackgroundImage = global::Set_app.Properties.Resources.wp661789_blue_gradient_wallpaper;
+            this.ClientSize = new System.Drawing.Size(852, 500);
+            this.Controls.Add(this.quit_button);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.Add_Set);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -241,6 +267,7 @@ namespace Set_app
             this.Controls.Add(this.Product);
             this.Controls.Add(this.Intersection);
             this.Controls.Add(this.Union);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Set_App";
             this.Text = "Set app";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -268,6 +295,8 @@ namespace Set_app
         private System.Windows.Forms.RichTextBox richTextBox5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label resultLabel;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button quit_button;
     }
 }
 

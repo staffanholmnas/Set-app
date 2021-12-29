@@ -208,5 +208,10 @@ namespace Set_app
             product = product.Distinct().ToList();
             Print_Result(product);
         }
+
+        private void quit_button_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
