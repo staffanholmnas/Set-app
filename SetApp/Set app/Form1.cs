@@ -12,6 +12,7 @@ namespace Set_app
 {
     public partial class Set_App : Form
     {
+        // lists that contain the sets
         private readonly List<string> list1 = new List<string>();
         private readonly List<string> list2 = new List<string>();
         private readonly List<string> list3 = new List<string>();
@@ -35,7 +36,7 @@ namespace Set_app
 
         private void Add_To_List(int setBox)
         {
-           
+            // create strings that can be added to the lists
             string s = "";
             switch (setBox)
             {
@@ -46,7 +47,7 @@ namespace Set_app
                 case 5:     s = richTextBox5.Text;   break;
                 default:    break;
             }
-            
+            // separate by commas
             string[] values = s.Split(',').Select(sValue => sValue.Trim()).ToArray();
             foreach (var item in values)
             {
@@ -64,6 +65,7 @@ namespace Set_app
 
         private void Union_Click(object sender, EventArgs e)
         {
+            // perform union of all selected sets
             List<string> union = new List<string>();
             Create_Result_Lists();
             union.AddRange(list1);
@@ -77,6 +79,7 @@ namespace Set_app
 
         private void Create_Result_Lists()
         {
+            // add text from textboxes to lists
             list1.Clear();
             list2.Clear();
             list3.Clear();
@@ -103,6 +106,7 @@ namespace Set_app
 
         private void Reset_Click(object sender, EventArgs e)
         {
+            // empty all fields and the result
             list1.Clear();
             list2.Clear();
             list3.Clear();
@@ -127,7 +131,8 @@ namespace Set_app
         }
 
         private void Add_Set_Click(object sender, EventArgs e)
-        {
+        { 
+            // show an additional set, max is 5
             if (addButtonClicked == 0)
             {
                 richTextBox3.Show();
@@ -153,6 +158,7 @@ namespace Set_app
 
         private void Intersection_Click(object sender, EventArgs e)
         {
+            // perform intersection of sets
             Create_Result_Lists();
             List<string> intersection = list1.Intersect(list2).ToList();
             if (textbox3IsVisible == true) intersection = intersection.Intersect(list3).ToList();
@@ -164,6 +170,7 @@ namespace Set_app
 
         private void Difference_Click(object sender, EventArgs e)
         {
+            // the difference between sets
             Create_Result_Lists();
             List<string> difference = list1.Except(list2).ToList();
             if (textbox3IsVisible == true) difference = difference.Except(list3).ToList();
@@ -175,6 +182,7 @@ namespace Set_app
 
         private void Product_Click(object sender, EventArgs e)
         {
+            // the product of all sets
             Create_Result_Lists();
             List<string> product = new List<string>();
             for (int i = 0; i < list1.Count; i++)
@@ -211,6 +219,7 @@ namespace Set_app
 
         private void quit_button_Click(object sender, EventArgs e)
         {
+            // exit the program
             Close();
         }
     }

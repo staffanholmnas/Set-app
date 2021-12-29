@@ -55,11 +55,12 @@ namespace Set_app
             // Union
             // 
             this.Union.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Union.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Union.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Union.Location = new System.Drawing.Point(441, 126);
             this.Union.Name = "Union";
             this.Union.Size = new System.Drawing.Size(83, 23);
-            this.Union.TabIndex = 2;
+            this.Union.TabIndex = 6;
             this.Union.Text = "Union";
             this.Union.UseVisualStyleBackColor = false;
             this.Union.Click += new System.EventHandler(this.Union_Click);
@@ -67,11 +68,12 @@ namespace Set_app
             // Intersection
             // 
             this.Intersection.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Intersection.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Intersection.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Intersection.Location = new System.Drawing.Point(441, 156);
             this.Intersection.Name = "Intersection";
             this.Intersection.Size = new System.Drawing.Size(83, 23);
-            this.Intersection.TabIndex = 2;
+            this.Intersection.TabIndex = 7;
             this.Intersection.Text = "Intersection";
             this.Intersection.UseVisualStyleBackColor = false;
             this.Intersection.Click += new System.EventHandler(this.Intersection_Click);
@@ -79,11 +81,12 @@ namespace Set_app
             // Product
             // 
             this.Product.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Product.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Product.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Product.Location = new System.Drawing.Point(441, 214);
             this.Product.Name = "Product";
             this.Product.Size = new System.Drawing.Size(83, 23);
-            this.Product.TabIndex = 2;
+            this.Product.TabIndex = 9;
             this.Product.Text = "Product";
             this.Product.UseVisualStyleBackColor = false;
             this.Product.Click += new System.EventHandler(this.Product_Click);
@@ -91,11 +94,12 @@ namespace Set_app
             // Difference
             // 
             this.Difference.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Difference.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Difference.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Difference.Location = new System.Drawing.Point(441, 185);
             this.Difference.Name = "Difference";
             this.Difference.Size = new System.Drawing.Size(83, 23);
-            this.Difference.TabIndex = 2;
+            this.Difference.TabIndex = 8;
             this.Difference.Text = "Difference";
             this.Difference.UseVisualStyleBackColor = false;
             this.Difference.Click += new System.EventHandler(this.Difference_Click);
@@ -113,6 +117,7 @@ namespace Set_app
             // Reset
             // 
             this.Reset.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Reset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Reset.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Reset.Location = new System.Drawing.Point(312, 156);
             this.Reset.Name = "Reset";
@@ -140,7 +145,7 @@ namespace Set_app
             this.richTextBox1.Location = new System.Drawing.Point(137, 126);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(152, 32);
-            this.richTextBox1.TabIndex = 12;
+            this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "";
             // 
             // richTextBox2
@@ -149,7 +154,7 @@ namespace Set_app
             this.richTextBox2.Location = new System.Drawing.Point(137, 185);
             this.richTextBox2.Name = "richTextBox2";
             this.richTextBox2.Size = new System.Drawing.Size(152, 31);
-            this.richTextBox2.TabIndex = 13;
+            this.richTextBox2.TabIndex = 2;
             this.richTextBox2.Text = "";
             // 
             // label1
@@ -179,11 +184,12 @@ namespace Set_app
             // Add_Set
             // 
             this.Add_Set.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Add_Set.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Add_Set.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add_Set.Location = new System.Drawing.Point(312, 126);
             this.Add_Set.Name = "Add_Set";
             this.Add_Set.Size = new System.Drawing.Size(75, 23);
-            this.Add_Set.TabIndex = 15;
+            this.Add_Set.TabIndex = 3;
             this.Add_Set.Text = "Add set";
             this.Add_Set.UseVisualStyleBackColor = false;
             this.Add_Set.Click += new System.EventHandler(this.Add_Set_Click);
@@ -195,6 +201,7 @@ namespace Set_app
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.Size = new System.Drawing.Size(152, 31);
             this.richTextBox3.TabIndex = 13;
+            this.richTextBox3.TabStop = false;
             this.richTextBox3.Text = "";
             this.richTextBox3.Visible = false;
             // 
@@ -218,6 +225,7 @@ namespace Set_app
             this.richTextBox4.Name = "richTextBox4";
             this.richTextBox4.Size = new System.Drawing.Size(152, 31);
             this.richTextBox4.TabIndex = 13;
+            this.richTextBox4.TabStop = false;
             this.richTextBox4.Text = "";
             this.richTextBox4.Visible = false;
             // 
@@ -241,6 +249,7 @@ namespace Set_app
             this.richTextBox5.Name = "richTextBox5";
             this.richTextBox5.Size = new System.Drawing.Size(152, 31);
             this.richTextBox5.TabIndex = 13;
+            this.richTextBox5.TabStop = false;
             this.richTextBox5.Text = "";
             this.richTextBox5.Visible = false;
             // 
@@ -272,11 +281,12 @@ namespace Set_app
             // quit_button
             // 
             this.quit_button.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.quit_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.quit_button.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quit_button.Location = new System.Drawing.Point(312, 214);
             this.quit_button.Name = "quit_button";
             this.quit_button.Size = new System.Drawing.Size(75, 23);
-            this.quit_button.TabIndex = 17;
+            this.quit_button.TabIndex = 5;
             this.quit_button.Text = "Quit";
             this.quit_button.UseVisualStyleBackColor = false;
             this.quit_button.Click += new System.EventHandler(this.quit_button_Click);
