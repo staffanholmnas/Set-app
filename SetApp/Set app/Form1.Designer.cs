@@ -245,7 +245,6 @@ namespace Set_app
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Set_app.Properties.Resources.wp661789_blue_gradient_wallpaper;
             this.ClientSize = new System.Drawing.Size(852, 500);
             this.Controls.Add(this.quit_button);
             this.Controls.Add(this.label7);
